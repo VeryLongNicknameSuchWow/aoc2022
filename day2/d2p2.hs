@@ -8,7 +8,7 @@ calculatePoints "B Z" = 3 + 6
 calculatePoints "C X" = 2 + 0
 calculatePoints "C Y" = 3 + 3
 calculatePoints "C Z" = 1 + 6
-calculatePoints _ = 0
+calculatePoints _ = error "Invalid input"
 
 readFileToLines :: FilePath -> IO [String]
 readFileToLines filePath = lines <$> readFile filePath
